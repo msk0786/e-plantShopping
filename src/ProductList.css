@@ -15,10 +15,26 @@ body {
     background-color: #4CAF50;
     color: #fff!important;
     padding: 15px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     font-size: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    /* Anchor absolute centered "Plants" (sticky is positioned) */
+}
+
+.nav-center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.nav-right{
+    justify-self: end;
 }
 
 .navbar .ul {
@@ -140,7 +156,7 @@ body {
     text-decoration: none;
 }
 .tag {
-    width: 400px;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,19 +173,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 650px;
+    width: auto;
     font-size: 19px;
+    gap: 14px;
 }
 .cart{
     color: white;
     display: flex;
+    position: relative;
+    line-height: 0;
 }
 .cart_quantity_count{
-    margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
     position: absolute;
-    font-size: 29px;
+    top: -6px;
+    right: -10px;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 8px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.95);
+    color: #2e7d32;
+    font-weight: 800;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
 
 }
 .plantname_heading{
@@ -233,6 +262,14 @@ body {
     .navbar {
         flex-direction: column; /* Change flex direction to stack items vertically */
         align-items: center; /* Align items to the center of the container */
+        gap: 10px;
+      }
+      .navbar{
+        display: flex;
+      }
+      .nav-center,
+      .nav-right{
+        justify-self: auto;
       }
     
       .tag {

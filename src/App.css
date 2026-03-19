@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .landing-page {
@@ -20,9 +19,9 @@
   width: 100%;
   height: 100%;
   background-image: url('https://cdn.pixabay.com/photo/2017/07/13/08/59/greenhouse-2499758_1280.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
-  filter: brightness(0.8);
+  filter: brightness(0.75);
 }
 .content {
   display: flex;
@@ -30,26 +29,27 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
- top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.5);
-  gap: 20px;
+  gap: 40px;
+  padding: 32px 20px;
+  overflow-y: auto;
 }
 
 .landing_content {
- margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
   z-index: 1;
-  text-align: center;
-  /* background-color: red; */
-  width: 400px;
-  height: 400px;
+  text-align: left;
+  width: min(520px, 92vw);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
+  padding: 28px 22px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 .content p,
@@ -58,12 +58,13 @@
 }
 
 .content h1 {
-  font-size: 48px;
+  font-size: clamp(34px, 4vw, 52px);
   margin-bottom: 10px;
+  letter-spacing: 0.4px;
 }
 
 .content p {
-  font-size: 25px;
+  font-size: clamp(18px, 2vw, 24px);
 }
 
 .divider {
@@ -120,11 +121,10 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
+    gap: 18px;
   }
 
   .landing_content {
-    margin-top: 100px; /* Adjust as needed */
-    margin-left: 0;
     width: 80%; /* Adjust as needed */
     text-align: center;
   }
