@@ -41,7 +41,7 @@
   text-align: left;
   width: min(520px, 92vw);
   display: flex;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   flex-direction: column;
   justify-content: center;
   gap: 12px;
