@@ -269,6 +269,9 @@ function ProductList({ onHomeClick }) {
                             </div>
                         </a>
                     </div>
+                    <a href="/" className="nav-home-link" onClick={(e) => handleHomeClick(e)} style={styleA}>
+                        Home
+                    </a>
 
                 </div>
                 <div className="nav-center">

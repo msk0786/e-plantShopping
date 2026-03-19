@@ -160,6 +160,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 18px;
+}
+
+.nav-home-link{
+    font-size: 22px !important;
+    opacity: 0.95;
+}
+
+.nav-home-link:hover{
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .tag img {
